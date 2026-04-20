@@ -1,0 +1,283 @@
+/* Variables (Menyalin dari file Anda, menambahkan warna spesifik sertifikat) */
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: rgba(15, 23, 42, 0.12);
+  --accent: #ff4d28; /* Merah/Orange Mugiwara */
+  --accent-soft: rgba(255, 77, 40, 0.15);
+  --success: #10b981;
+  --blue: #3b82f6;
+  --green: #16a34a;
+  --purple: #8b5cf6;
+  
+  /* Warna khusus card sertifikat */
+  --cert-red: #F04422;
+  --cert-blue: #3B82F6;
+  --cert-green: #228B22;
+}
+
+/* --- SIDEBAR & LAYOUT DASAR (Sama dengan kode Anda) --- */
+.pageWrapper {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4f5f8 0%, #e7e9ed 100%);
+  font-family: sans-serif;
+}
+
+.sidebar {
+  width: 300px;
+  background: #1f2937;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1rem;
+  border-radius: 24px;
+  background: rgba(255, 77, 40, 0.1);
+}
+
+.logoText {
+  font-weight: 700;
+  color: white;
+}
+
+.logoHighlight {
+  color: var(--accent);
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.menuItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.menuItem:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.active {
+  background: var(--accent);
+  color: white;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+/* --- HEADER & STATS (Diadaptasi dari kode Anda) --- */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--text);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.pageSubtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.searchBox input {
+  width: 260px;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  outline: none;
+}
+
+.statsRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.statCard {
+  background: var(--surface);
+  border-radius: 24px; /* Sedikit lebih bulat mengikuti gambar */
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  min-width: 200px;
+}
+
+.statLabel {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.statValue {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* Teks warna spesifik untuk stat */
+.textRed { color: var(--cert-red); }
+.textGreen { color: var(--cert-green); }
+
+/* --- KARTU SERTIFIKAT --- */
+.certificatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certCard {
+  background: var(--surface);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bagian Atas Kartu (Warna Solid) */
+.certTop {
+  padding: 2rem 1.5rem;
+  color: white;
+  height: 130px;
+}
+
+.cardRed { background-color: var(--cert-red); }
+.cardBlue { background-color: var(--cert-blue); }
+.cardGreen { background-color: var(--cert-green); }
+
+.certTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.certInstitution {
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Bagian Bawah Kartu (Putih) */
+.certBottom {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: var(--surface);
+}
+
+.certInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.certDateLabel {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0 0 0.25rem 0;
+}
+
+.certDate {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.75rem 0;
+}
+
+.certBadge {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.btnDownload {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnDownload:hover {
+  opacity: 0.9;
+}
+
+/* --- RESPONSIVE (Menyalin dari kode Anda) --- */
+@media (max-width: 980px) {
+  .pageWrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .statsRow {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .pageHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox input {
+    width: 100%;
+  }
+}

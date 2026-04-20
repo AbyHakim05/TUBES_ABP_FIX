@@ -1,0 +1,294 @@
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: rgba(15, 23, 42, 0.12);
+  --accent: #ff4d28;
+  --accent-soft: rgba(255, 77, 40, 0.15);
+  --success: #10b981;
+  --blue: #3b82f6;
+  --green: #16a34a;
+  --purple: #8b5cf6;
+}
+
+.pageWrapper {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4f5f8 0%, #e7e9ed 100%);
+}
+
+.sidebar {
+  width: 300px;
+  background: #1f2937;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1rem;
+  border-radius: 24px;
+  background: rgba(255, 77, 40, 0.1);
+}
+
+.logoText {
+  font-weight: 700;
+  color: white;
+}
+
+.logoHighlight {
+  color: var(--accent);
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.menuItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.menuItem:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.active {
+  background: var(--accent);
+  color: white;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2.5rem;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: white;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--text);
+}
+
+.searchBox input {
+  width: 260px;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  outline: none;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: var(--surface);
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.07);
+}
+
+.statLabel {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+}
+
+.statValue {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.statNote {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.progressSection {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.progressCard,
+.goalCard {
+  background: var(--surface);
+  border-radius: 32px;
+  padding: 2rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.progressHeader h2 {
+  margin: 0;
+  color: var(--text);
+}
+
+.progressList {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.progressRow {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.progressInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.progressBullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.progressValue {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 16px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.redBar {
+  background: var(--accent);
+}
+
+.blueBar {
+  background: var(--blue);
+}
+
+.greenBar {
+  background: var(--green);
+}
+
+.purpleBar {
+  background: var(--purple);
+}
+
+.goalCard {
+  position: relative;
+}
+
+.goalLabel {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+.goalCard h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.goalTrack {
+  margin: 1.5rem 0 0.75rem;
+  width: 100%;
+  height: 18px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.goalFill {
+  height: 100%;
+  width: 60%;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.goalNote {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 980px) {
+  .pageWrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .pageHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox input {
+    width: 100%;
+  }
+}

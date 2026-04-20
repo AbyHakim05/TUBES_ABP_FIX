@@ -1,0 +1,69 @@
+.logoutButton {
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: #c0c0c0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.logoutButton:hover {
+  background-color: #a8a8a8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logoutButton:active {
+  transform: translateY(0);
+}
+
+.logoutButton:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.dangerLogoutButton {
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: #e53935;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dangerLogoutButton:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4);
+}
+
+.dangerLogoutButton:active {
+  transform: translateY(0);
+}
+
+.dangerLogoutButton:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.icon {
+  font-size: 1.2em;
+}

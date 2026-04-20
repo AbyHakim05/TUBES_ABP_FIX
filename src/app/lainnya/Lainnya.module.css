@@ -1,0 +1,200 @@
+:root {
+  --sidebar-bg: #272727;
+  --panel-bg: #f5f5f5;
+  --card-bg: #ffffff;
+  --text-light: #e2e2e2;
+  --text-dark: #212121;
+  --text-muted: #707070;
+  --primary: #ff4500;
+  --danger: #e53935;
+}
+
+.pageWrapper {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e8e8e8 0%, #f6f6f6 100%);
+}
+
+.sidebar {
+  width: 300px;
+  background: #1f2937;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1rem;
+  border-radius: 24px;
+  background: rgba(255, 77, 40, 0.1);
+}
+
+.logoText {
+  font-weight: 700;
+  color: white;
+}
+
+.logoHighlight {
+  color: var(--primary);
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.menuItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.menuItem:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.active {
+  background: var(--primary);
+  color: white;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 42px 48px;
+}
+
+.pageHeader {
+  margin-bottom: 28px;
+}
+
+.pageTitle {
+  margin: 0 0 8px;
+  font-size: 42px;
+  color: var(--text-dark);
+}
+
+.pageSubtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.profileCard,
+.settingsCard,
+.actionsSection {
+  background: var(--card-bg);
+  border-radius: 30px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.profileAvatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff8a40, #ff4b00);
+}
+
+.profileName {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.profileStatus {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.editButton,
+.logoutButton,
+.deleteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.editButton {
+  margin-top: 20px;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.settingsCard {
+  display: grid;
+  gap: 16px;
+}
+
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-radius: 24px;
+  background-color: #f7f7f7;
+}
+
+.settingLabel {
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.settingDescription {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.settingArrow {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+}
+
+.actionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logoutButton {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.deleteButton {
+  background-color: #e53935;
+  color: #fff;
+}

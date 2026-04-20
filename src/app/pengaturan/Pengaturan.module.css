@@ -1,0 +1,260 @@
+:root {
+  --sidebar-bg: #252525;
+  --page-bg: #f1f1f1;
+  --panel-bg: #ffffff;
+  --primary: #ff4500;
+  --danger: #e53935;
+  --text-dark: #1f1f1f;
+  --text-muted: #6f6f6f;
+}
+
+.pageWrapper {
+  display: flex;
+  min-height: 100vh;
+  background: var(--page-bg);
+}
+
+.sidebar {
+  width: 300px;
+  background: #1f2937;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1rem;
+  border-radius: 24px;
+  background: rgba(255, 77, 40, 0.1);
+}
+
+.logoEmoji {
+  font-size: 1.8rem;
+}
+
+.logoText {
+  font-weight: 700;
+  color: white;
+}
+
+.logoHighlight {
+  color: var(--primary);
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.menuItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.menuItem:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.active {
+  background: var(--primary);
+  color: white;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 42px 48px;
+}
+
+.pageHeader {
+  margin-bottom: 28px;
+}
+
+.pageTitle {
+  margin: 0 0 8px;
+  font-size: 40px;
+  color: var(--text-dark);
+}
+
+.pageSubtitle {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card,
+.cardDanger {
+  background: var(--panel-bg);
+  border-radius: 32px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+  padding: 28px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cardLabel {
+  margin: 0 0 6px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.avatarCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ff7b34, #ff3500);
+}
+
+.fieldRow {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.fieldRow label {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.fieldRow input,
+.fieldRow select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background: #fafafa;
+}
+
+.primaryButton,
+.secondaryButton,
+.logoutButton,
+.deleteButton,
+.toggleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: filter 0.2s ease;
+}
+
+.primaryButton {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.secondaryButton,
+.toggleButton {
+  background-color: #f4f4f4;
+  color: var(--text-dark);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.logoutButton:hover,
+.deleteButton:hover,
+.toggleButton:hover {
+  filter: brightness(0.95);
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background-color: #fafafa;
+  margin-bottom: 12px;
+}
+
+.cardDanger {
+  border: 1px solid rgba(229, 57, 53, 0.15);
+}
+
+.dangerTitle {
+  margin: 0 0 8px;
+  color: var(--danger);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.dangerText {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+}
+
+.logoutButton {
+  width: 100%;
+  background-color: #f4f4f4;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.deleteButton {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: var(--danger);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c62828;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4);
+}
+
+.deleteButton:active {
+  transform: translateY(0);
+}
+
+.deleteButton:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}

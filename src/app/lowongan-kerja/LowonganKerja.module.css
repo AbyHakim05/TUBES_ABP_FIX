@@ -1,0 +1,321 @@
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: rgba(15, 23, 42, 0.12);
+  --accent: #ff4d28;
+  --accent-soft: rgba(255, 77, 40, 0.15);
+  --success: #10b981;
+  --blue: #3b82f6;
+  --green: #16a34a;
+  --purple: #8b5cf6;
+}
+
+.pageWrapper {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4f5f8 0%, #e7e9ed 100%);
+}
+
+.sidebar {
+  width: 300px;
+  background: #1f2937;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.brandSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1rem;
+  border-radius: 24px;
+  background: rgba(255, 77, 40, 0.1);
+}
+
+.logoText {
+  font-weight: 700;
+  color: white;
+}
+
+.logoHighlight {
+  color: var(--accent);
+}
+.brandTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.brandSubtitle {
+  margin: 0;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.menuItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.menuItem:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.active {
+  background: var(--accent);
+  color: white;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2.5rem;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: white;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: var(--dark);
+  font-size: 2.05rem;
+}
+
+.searchBox input {
+  width: 260px;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  outline: none;
+}
+
+.filterPanel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filterBtn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: white;
+  color: var(--dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.activeFilter {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.cardsSection {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statisticsCard,
+.infoCard {
+  background: var(--surface);
+  border-radius: 28px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.cardLabel {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.statisticsCard h2 {
+  margin: 0 0 0.75rem;
+  color: var(--dark);
+}
+
+.statisticsCard p,
+.infoCard p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detailButton {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+}
+
+.tipList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.tipList li {
+  padding: 1rem;
+  border-radius: 18px;
+  background: var(--bg);
+  color: var(--dark);
+}
+
+.jobListSection {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.jobCard {
+  background: var(--surface);
+  border-radius: 28px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  display: grid;
+  gap: 1rem;
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.jobTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--dark);
+}
+
+.company {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.badge {
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.jobBody {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+}
+
+.jobActions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.applyButton,
+.saveButton {
+  padding: 0.9rem 1.3rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.applyButton {
+  background: var(--accent);
+  color: white;
+}
+
+.saveButton {
+  background: var(--surface-soft);
+  color: var(--dark);
+}
+
+@media (max-width: 980px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .mainContent {
+    padding: 1.5rem;
+  }
+
+  .cardsSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .pageHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox input {
+    width: 100%;
+  }
+}

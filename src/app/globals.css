@@ -1,0 +1,40 @@
+:root {
+  --primary-color: #e33c2f;
+  --primary-hover: #c93026;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --bg-color: #ffffff;
+  --bg-secondary: #fafafa;
+  --border-color: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  /* The font variable will be injected by Next.js layout */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}

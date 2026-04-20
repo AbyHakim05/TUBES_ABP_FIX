@@ -1,0 +1,122 @@
+.sidebar {
+  width: 300px;
+  background: #2D2D2D; /* Looked slightly different or same dark gray */
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-shrink: 0;
+  z-index: 10;
+  min-height: 100vh;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+}
+
+.logoImageBox {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-weight: 700;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.logoTextBlue {
+  color: #3b82f6;
+}
+
+.logoHighlight {
+  color: #ff4d28;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1; /* allow it to stretch if footer needed */
+}
+
+.menuItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.menuItem:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.active {
+  background: #ff4d28;
+  color: white;
+  border-radius: 999px; /* The screenshot shows rounded pill-like active buttons for admin */
+}
+
+.footerProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: url('/assets/avatar_default.jpg'), #ccc;
+  background-size: cover;
+  background-position: center;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.userRole {
+  display: block;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .menuList {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
